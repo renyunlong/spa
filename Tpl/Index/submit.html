@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SPA人格量表-明道</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css">
+    <!-- 引入bootstrap相关js -->
+    <script type='text/javascript' src='/Public/js/jquery-1.8.3.min.js'></script>
+    <script type='text/javascript' src='/Public/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/Public/js/basic.js'></script>
+    <!-- 引入页面css -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/basic.css" />
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+            <div id="logo">
+                <a href="#">
+                    <img src="/Public/images/logo.png">
+                </a>
+            </div>
+		</div>
+	</header>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <p class="floor">
+                <if condition="$JPResult eq 'P'">
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">合作型（P）</h4>
+                        易于协调、可由各角度欣赏事物、具弹性、开放的态度、依据可靠的资料做定、不任意批评。<br>
+                        犹豫不决、散漫无计划、不能有效的控制情况、易被分心、不易照计划完事。
+                    </div>
+                </div>
+                <elseif condition="$JPResult eq 'J'"/>
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">竞争型（J）</h4>
+                        有计划系统的、断有决心的、有控制的能力、做决定明快。<br>
+                        固执、不易妥协、没有弹性、依手边现有的少许资料做决定、任何批评为工作计划所控制。
+                    </div>
+                </div>
+                <else /></if>
+            </p>
+            <p class="floor">
+                <if condition="$TFResult eq 'T'">
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">思考型（T自制）</h4>
+                        合乎逻辑擅于分析、客观、公正、有逻辑系统的思考、具拟判能力、坚定。<br>
+                        体谅他人感受、了解他人的需要、喜欢和谐的人际关系、易表露情感、喜去说服他人。
+                    </div>
+                </div>
+                <elseif condition="$TFResult eq 'F'"/>
+                <div class="media">
+                    <div class="media-body">
+                        <h4 class="media-heading">情感型（F表现）</h4>
+                        忽略他人感受、误解别人的价值观、不在意和谐的人、不露感情、悯情较少、不能说服他人。<br>
+                        不合乎逻辑、不够客观、没有组织系统的思考、不具批判精神全盘接受、感情用事。
+                    </div>
+                </div>
+                <else /></if>
+            </p>
+        </div>
+    </div>
+    <footer>© 2015 kaigan</footer>
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SPA人格量表-明道</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css">
+    <!-- 引入bootstrap相关js -->
+    <script type='text/javascript' src='/Public/js/jquery-1.8.3.min.js'></script>
+    <script type='text/javascript' src='/Public/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/Public/js/basic.js'></script>
+    <!-- 引入页面css -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/basic.css" />
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+            <div id="logo">
+                <a href="#">
+                    <img src="/Public/images/logo.png">
+                </a>
+            </div>
+		</div>
+	</header>
+    <div class="container-fluid">
+        <div class="col-md-12">
+            <div class="bs-example" data-example-id="simple-table">
+                <table class="table">
+                  <caption>后台管理</caption>
+                  <thead>
+                    <tr>
+                      <th>#</th>
+                      <th>姓名</th>
+                      <th>职位</th>
+                      <th>公司</th>
+                      <th>手机</th>
+                      <th>测试结果</th>
+                    </tr>
+                  </thead>
+                  <tbody>
+                    <foreach name="list" item="vo">
+                    <tr>
+                      <th scope="row">{$vo.id}</th>
+                      <td>{$vo.name}</td>
+                      <td>{$vo.position}</td>
+                      <td>{$vo.company}</td>
+                      <td>{$vo.tel}</td>
+                      <td>{$vo.jp}|{$vo.tf}</td>
+                    </tr>
+                    </foreach>
+                  </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <footer>© 2015 kaigan</footer>
+</body>
+</html>

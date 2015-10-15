@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>SPA人格量表-明道</title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <!-- bootstrap -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/bootstrap.min.css">
+    <!-- 引入bootstrap相关js -->
+    <script type='text/javascript' src='/Public/js/jquery-1.8.3.min.js'></script>
+    <script type='text/javascript' src='/Public/js/bootstrap.min.js'></script>
+    <script type='text/javascript' src='/Public/js/basic.js'></script>
+    <!-- 引入页面css -->
+    <link rel="stylesheet" type="text/css" href="/Public/css/basic.css" />
+</head>
+<body>
+	<header>
+		<div class="container-fluid">
+            <div id="logo">
+                <a href="#">
+                    <img src="/Public/images/logo.png">
+                </a>
+            </div>
+		</div>
+	</header>
+    <div class="container-fluid">
+        <form action="index.php?m=Index&c=Index&a=submit" method="post" id="registerForm" role="form">
+            <div id="step1" class="row">
+                <div class="title">SPA人格量表JP版</div>
+                <div class="col-md-12">
+                    <p class="floor">
+                        <div class="media">
+                        <div class="media-body">
+                            <h4 class="media-heading">提示</h4>
+                            所谓偏"好",就像我们绝大多数人总是习惯于用右手写字一样：下面每一组题目都是两个相对的极端，每个人都是对其中之一有天生的偏爱，而且，当您使用偏爱的方法时，您往往表现最佳，觉得最能胜任，自然精力充沛。<br>
+                            请在每题a,b的选择方格中评分,a+b评分的总和为5。
+                            提示 : 0-从不,1-很少,2-间中,3-很多,4-极多,5-总是
+                        </div>
+                    </div>
+                    </p>
+                    <p class="floor">
+                        <label><span>1</span>a.顺着他人意思做出承诺。b.做明确的承诺﹐并确实加以实践。</label>
+                        <select name="1" id="1" class="form-control">
+                            <option value="">请选择</option>
+      						<option value="0">从不</option>
+      						<option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+      					</select>
+                    </p>
+                    <p class="floor">
+                        <label><span>2</span>a.订下完成工作的最后期限。拟订时间表，并严格遵行。</label>
+                        <select name="2" id="2" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>3</span>a.事前详细考虑各种可能性，事后反复思考。b.搜集需要的资料，稍后作考虑后﹐作出明快决定。</label>
+                        <select name="3" id="3" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>4</span>a.问题的答案保持弹性﹐且可修改。b.问题的答案是明确的、可预知或可预测。</label>
+                        <select name="4" id="4" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor text-right">
+                        <button type="button" class="btn btn-primary nextBtn">下一步</button>
+                    </p>
+                </div>
+            </div>
+            <div id="step2" class="row hidden">
+                <div class="title">SPA人格量表JP版</div>
+                <div class="col-md-12">
+                    <p class="floor">
+                        <label><span>5</span>a.临时视需要而作计划。b.事先详细计划。</label>
+                        <select name="5" id="5" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>6</span>a.尽可能少用记事簿记载事情。b.尽可能在记事簿记下事情。</label>
+                        <select name="6" id="6" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>7</span>a.随心所欲做些事。b.尽量事先了解别人期望我做什么。</label>
+                        <select name="7" id="7" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>8</span>a.一切妥当或安适的情况下，宣报开会。b.在预定的时间内开会。</label>
+                        <select name="8" id="8" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor text-right">
+                        <button type="button" class="btn btn-primary prevBtn">上一步</button>
+                        <button type="button" class="btn btn-primary nextBtn">下一步</button>
+                    </p>
+                </div>
+            </div>
+            <div id="step3" class="row hidden">
+                <div class="title">SPA人格量表TF版</div>
+                <div class="col-md-12">
+                    <p class="floor">
+                        <label><span>1</span>a.根据现有资料及情境的分析，对他人做评断。b.设身处地替别人着想，了解别人的需要、情感和价值，然后作出决定。</label>
+                        <select name="9" id="9" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>2</span>a.以合乎逻辑思考及按部就班的分析得到结论。b.根据过去生活的体验及信息来得到结论。</label>
+                        <select name="10" id="10" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>3</span>a.被认为是一个善长于思考的人。b.被认为是一个敏于感觉的人。</label>
+                        <select name="11" id="11" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>4</span>a.协助别人做出合理的决定。b.协助别人探索他们自己的感受。</label>
+                        <select name="12" id="12" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor text-right">
+                        <button type="button" class="btn btn-primary prevBtn">上一步</button>
+                        <button type="button" class="btn btn-primary nextBtn">下一步</button>
+                    </p>
+                </div>
+            </div>
+            <div id="step4" class="row hidden">
+                <div class="title">SPA人格量表TF版</div>
+                <div class="col-md-12">
+                    <p class="floor">
+                        <label><span>5</span>a.运用资料分析事实来做决定。b.运用常识，凭着信念来做决定。</label>
+                        <select name="13" id="13" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>6</span>a.相信经证实的结语。b.相信自已的想法。</label>
+                        <select name="14" id="14" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>7</span>a.是理性的。b.是感性的。</label>
+                        <select name="15" id="15" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor">
+                        <label><span>8</span>a.运用能力，分析情境。b.体验感人的情境或事物。</label>
+                        <select name="16" id="16" class="form-control">
+                            <option value="">请选择</option>
+                            <option value="0">从不</option>
+                            <option value="1">很少</option>
+                            <option value="2">间中</option>
+                            <option value="3">很多</option>
+                            <option value="4">极多</option>
+                            <option value="5">总是</option>
+                        </select>
+                    </p>
+                    <p class="floor text-right">
+                        <button type="button" class="btn btn-primary prevBtn">上一步</button>
+                        <button type="button" class="btn btn-primary nextBtn">下一步</button>
+                    </p>
+                </div>
+            </div>
+            <div id="step5" class="row hidden">
+                <div class="title">提交资料</div>
+                <div class="col-md-12">
+                    <p class="floor">
+                        <label><span>*</span>姓名：</label>
+                        <input name="name" id="name" type="text" class="form-control">
+                    </p>
+                    <p class="floor">
+                        <label>职位：</label>
+                        <input name="position" id="position" type="text" class="form-control">
+                    </p>
+                    <p class="floor">
+                        <label><span>*</span>公司：</label>
+                        <input name="company" id="company" type="text" class="form-control">
+                    </p>
+                    <p class="floor">
+                        <label><span>*</span>移动电话 ：</label>
+                        <input type="tel" name="tel" id="tel" class="form-control" placeholder="移动电话号码">
+                    </p>
+                    <p class="floor text-right">
+                        <button type="button" class="btn btn-primary prevBtn">上一步</button>
+                        <button id="submit" type="submit" class="btn btn-primary">提交</button>
+                    </p>
+                </div>
+            </div>
+        </form>
+    </div>
+    <footer>© 2015 kaigan</footer>
+</body>
+</html>
